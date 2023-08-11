@@ -2,7 +2,11 @@ import { MessagesRepository } from "./messages.repository";
 
 export class MessagesService {
 
-  constructor(public messagesRepo: MessagesRepository) {}
+  messagesRepo: MessagesRepository;
+
+  constructor() {
+    this.messagesRepo = new MessagesRepository();
+  }
 
   findOne(id: string) {
     return this.messagesRepo.findOne(id);
@@ -13,6 +17,6 @@ export class MessagesService {
   }
 
   create(content:string) {
-    return this.create(content);
+    return this.messagesRepo.create(content);
   }
 }

@@ -1,16 +1,13 @@
-import { readFile, writeFile } from "fs"
-
 export class MessagesService {
-
-  async findOne(id: string) {
-
-  }
-
-  async findAll() {
+  findOne(id: string) {
 
   }
 
-  async create(message:string) {
+  findAll() {
+
+  }
+
+  create(message:string) {
 
   }
 }

@@ -13,16 +13,16 @@ export class MessagesController {
 
   @Get() 
   listMessages() {
-
+    return this.messagesService.findAll();
   }
 
   @Post()
   createMessage(@Body() body: createMessageDto) {
-    console.log(body)
+    return this.messagesService.create(body.content);
   }
 
   @Get('/:id')
-  getMessage(@Param() id: string) {
-    console.log(id)
+  getMessage(@Param('id') id: string) {
+    return this.messagesService.findOne(id);
   }
 }

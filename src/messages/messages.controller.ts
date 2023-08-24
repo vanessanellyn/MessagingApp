@@ -27,3 +27,18 @@ export class MessagesController {
     return message;
   }
 }
+
+/*
+  CLASS DECORATOR 
+    @Controller() 
+
+  METHOD DECORATOR
+    @Get() and @Post()
+
+  ARGUMENT DECORATOR
+    @Body()       = Get the content of the HTTP request
+    @Param('id')  = Get the argument of the URL
+    @Header()     = Get the local host or content-type
+    @Query()      = Get the validation or query string in the URL
+
+*/
